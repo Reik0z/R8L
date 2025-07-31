@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbnufp0b60xf6"]
+[gd_scene load_steps=4 format=3 uid="uid://dbnufp0b60xf6"]
 
 [ext_resource type="PackedScene" uid="uid://qtcg3edvn5fc" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Car 07/Car7.blend" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://b7bdw2tsrqxfr" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Car 07/car_7.gd" id="2_0wfyh"]
 
+[sub_resource type="Environment" id="Environment_0wfyh"]
+background_mode = 1
+background_color = Color(0.964706, 0.721569, 0.713726, 1)
+
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0wfyh")
 
 [node name="Car72" parent="." instance=ExtResource("1_o5qli")]
 script = ExtResource("2_0wfyh")
