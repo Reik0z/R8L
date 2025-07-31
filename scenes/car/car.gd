@@ -4,3 +4,10 @@ extends PathFollow3D
 
 func _process(delta: float) -> void:
 	progress += speed * delta
+	
+
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		speed *= 2
+	if event.is_action_released("ui_accept"):
+		speed /= 2
