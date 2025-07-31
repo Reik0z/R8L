@@ -1,19 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpw3xwhptx7n"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_e3jde"]
-size = Vector2(2, 4)
-
 [sub_resource type="Curve3D" id="Curve3D_e3jde"]
+bake_interval = 0.1
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[node name="Straight" type="Node3D"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_e3jde"]
+size = Vector2(2, 4)
+
+[node name="Straight" type="Path3D"]
+curve = SubResource("Curve3D_e3jde")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_e3jde")
-
-[node name="Path3D" type="Path3D" parent="."]
-curve = SubResource("Curve3D_e3jde")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbnufp0b60xf6"]
 
-[ext_resource type="PackedScene" uid="uid://qtcg3edvn5fc" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Car 07/Car7.blend" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://b7bdw2tsrqxfr" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Car 07/car_7.gd" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bpw3xwhptx7n" path="res://scenes/road_segments/straight/straight.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://su70fu05sdnl" path="res://scenes/car/car.tscn" id="2_0wfyh"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 background_mode = 1
@@ -12,8 +12,10 @@ background_color = Color(0.964706, 0.721569, 0.713726, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0wfyh")
 
-[node name="Car72" parent="." instance=ExtResource("1_o5qli")]
-script = ExtResource("2_0wfyh")
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.966448, 0.256863, 0, -0.256863, 0.966448, 0, 2.55762, 5.62484)
+transform = Transform3D(-4.37114e-08, 0.257133, -0.966376, 0, 0.966376, 0.257133, 1, 1.12396e-08, -4.22416e-08, -3.76192, 0.623784, 0.181771)
+
+[node name="Straight" parent="." instance=ExtResource("1_o5qli")]
+
+[node name="Car" parent="Straight" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -2)
