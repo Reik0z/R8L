@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbnufp0b60xf6"]
 
-[ext_resource type="PackedScene" uid="uid://bpw3xwhptx7n" path="res://scenes/road_segments/straight/straight.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bpw3xwhptx7n" path="res://scenes/roads/road_1/road.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://su70fu05sdnl" path="res://scenes/car/car.tscn" id="2_0wfyh"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
@@ -13,9 +13,9 @@ background_color = Color(0.964706, 0.721569, 0.713726, 1)
 environment = SubResource("Environment_0wfyh")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.257133, -0.966376, 0, 0.966376, 0.257133, 1, 1.12396e-08, -4.22416e-08, -3.76192, 0.623784, 0.181771)
+transform = Transform3D(-0.607126, 0.0694202, -0.791567, 1.21272e-08, 0.996176, 0.0873644, 0.794605, 0.0530412, -0.604805, -4.39495, 2.64996, -5.37414)
 
-[node name="Straight" parent="." instance=ExtResource("1_o5qli")]
+[node name="Road1" parent="." instance=ExtResource("1_o5qli")]
 
-[node name="Car" parent="Straight" instance=ExtResource("2_0wfyh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -2)
+[node name="Car" parent="Road1" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
