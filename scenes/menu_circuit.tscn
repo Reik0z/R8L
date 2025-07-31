@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2dcai8cjx7uv"]
+
+[ext_resource type="PackedScene" uid="uid://dh584kc6ywd10" path="res://scenes/roads/road_2/road_2.tscn" id="1_siwxv"]
+[ext_resource type="PackedScene" uid="uid://su70fu05sdnl" path="res://scenes/car/car.tscn" id="2_pjrio"]
+
+[sub_resource type="Environment" id="Environment_siwxv"]
+background_mode = 1
+background_color = Color(0.764706, 0.639216, 0.658824, 1)
+
+[node name="MenuCircuit" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_siwxv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 2)
+
+[node name="Road2" parent="." instance=ExtResource("1_siwxv")]
+
+[node name="Car" parent="Road2" instance=ExtResource("2_pjrio")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -1, 0, -1)
+tilt_enabled = false
+speed = 5.0
