@@ -36,4 +36,5 @@ mesh = SubResource("BoxMesh_0wfyh")
 [node name="Road1" parent="Node3D" instance=ExtResource("1_o5qli")]
 
 [node name="Car" parent="Node3D/Road1" instance=ExtResource("2_0wfyh")]
-transform = Transform3D(-0.55092, 0, -0.834558, 0, 1, 0, 0.834558, 0, -0.55092, 3.5, 0, 0)
+transform = Transform3D(-0.550913, 0, -0.834549, 0, 0.999985, 0, 0.834547, 0, -0.550914, 3.41736, 0, 0.125184)
+h_offset = 0.15
