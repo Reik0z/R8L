@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpw3xwhptx7n"]
+[gd_scene load_steps=3 format=3 uid="uid://bpw3xwhptx7n"]
 
 [sub_resource type="Curve3D" id="Curve3D_e3jde"]
 closed = true
@@ -9,10 +9,13 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43fpl"]
+
 [node name="Road1" type="Path3D"]
 curve = SubResource("Curve3D_e3jde")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+material_override = SubResource("StandardMaterial3D_43fpl")
 polygon = PackedVector2Array(0, 0, 0, 0.01, 1, 0.01, 1, 0)
 mode = 2
 path_node = NodePath("..")
