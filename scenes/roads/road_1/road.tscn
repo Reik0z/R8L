@@ -4,10 +4,24 @@
 closed = true
 bake_interval = 0.01
 _data = {
-"points": PackedVector3Array(-1.90104, 0, 0.0309114, 1.90104, 0, -0.0309114, -1.581, 0, 0.926, -1.66623, 0.0565929, -1.77109, 1.66623, -0.0565929, 1.77109, 5, 0.95, 0, 1.15399, 0.0380278, -1.24158, -1.15399, -0.0380278, 1.24158, 5, -0.5, 5, 2.37281, -0.0573602, 1.77295, -2.37281, 0.0573602, -1.77295, 0, 0.85, 6),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
+"points": PackedVector3Array(-4.40119, 0, -2.90538, 4.40119, 0, 2.90538, 3.5, 0, 0, 0.741463, 0, 9.10395, -0.741463, 0, -9.10395, 15.948, 0.501614, -5.30308, 3.21702, -0.279297, -1.69244, -3.21702, 0.279297, 1.69244, 0.619286, 2.49255, -1.83337, 2.46959, 0.290161, -0.580819, -2.46959, -0.290161, 0.580819, -5.58197, 2.03235, 0.727508, -0.478787, 0, 3.36241, 0.478787, 0, -3.36241, -12.5, 0.809299, -3.5, -3.95939, 0, -0.261217, 3.95939, 0, 0.261217, -6, 0, -8),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
-point_count = 4
+point_count = 6
 
 [node name="Road1" type="Path3D"]
 curve = SubResource("Curve3D_e3jde")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0.01, 1, 0.01, 1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = true
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
