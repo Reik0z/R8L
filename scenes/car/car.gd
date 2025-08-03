@@ -5,7 +5,7 @@ extends PathFollow3D
 @export var engine_force: float = 25.0
 @export var mass: float = 1.0
 @export var gravity: float = 9.8
-@export var friction_coefficient: float = 0.95            
+@export var friction_coefficient: float = 1.5
 
 var current_speed: float = 0.0
 var current_sum_of_forces: float = 0.0
